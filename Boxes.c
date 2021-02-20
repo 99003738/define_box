@@ -8,8 +8,6 @@ Box* add_boxes(Box *box1,unsigned int number_of_boxes)
         printf("You can't add anymore boxes");
         return ;
     }
-    printf("\nEnter how many boxes you want to add :");
-    scanf("%u",&number_of_boxes);
     for(int i=0;i<number_of_boxes;i++)
     {
         printf("\nEnter Unique ID for the BOX :");
