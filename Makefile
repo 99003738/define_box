@@ -1,4 +1,10 @@
+# Name of the project.
 PROJECT_NAME = box38
+
+# Output directory
+BUILD = build
+
+
 SRC = test_factorial.c\
 factorial.c\
 unity/unity.c
