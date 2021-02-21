@@ -1,7 +1,7 @@
 #include "box38.h"
 
 
-int* input(void)
+int* _input(void)
 {
     int number_box;
     printf(" Enter the number of table want to create : ");
@@ -9,3 +9,4 @@ int* input(void)
     return (&number_box);
 
 }
+
