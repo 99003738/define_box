@@ -1,4 +1,4 @@
-PROJECT_NAME = factorial
+PROJECT_NAME = box38
 SRC = test_factorial.c\
 factorial.c\
 unity/unity.c
