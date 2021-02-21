@@ -4,16 +4,23 @@ PROJECT_NAME = box38
 # Output directory
 BUILD = build
 
-
+# All source code files
 SRC = test_factorial.c\
 factorial.c\
 unity/unity.c
+
+
+# All test source files
+
+
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+
 
 INC =./unity
 
 $(PROJECT_NAME).out: $(SRC)
 	gcc $^ -I $(INC) -o $@
-
+# All test source files
 test: $(PROJECT_NAME).out
 	./$(PROJECT_NAME).out
 
