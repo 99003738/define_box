@@ -27,6 +27,10 @@ typedef struct box
     long int weight;
 } BOX;
 
+int* bptr;
+
+
+
 int* _input(void);
 int table_allocation();
 
