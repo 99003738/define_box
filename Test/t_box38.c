@@ -3,6 +3,7 @@
 
 int main()
 {
-  
+  table_allocation();
+  inserting_value(bptr);
 }
 
