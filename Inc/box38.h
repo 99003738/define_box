@@ -32,8 +32,10 @@ int* bptr;
 
 
 int* _input(void);
-int table_allocation();
+int* table_allocation(void);
+int additionOfBox(int*);
 
+int inserting_value(int*);
 
 
 
