@@ -27,7 +27,7 @@ typedef struct box
     long int weight;
 } BOX;
 
-int input(void);
+int* input(void);
 
 
 
