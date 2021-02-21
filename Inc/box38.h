@@ -14,4 +14,22 @@
 #define __BOX38_H__
 
 
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct box
+{
+    long int Uniq_Id;
+    long int length;
+    long int breadth;
+    long int height;
+    char color[15] ;
+    long int weight;
+} BOX;
+
+int input(void);
+
+
+
+
 #endif

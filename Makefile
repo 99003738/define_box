@@ -7,26 +7,28 @@ PROJECT_NAME = box38
 BUILD = build
 
 # All source code files
-SRC = test_factorial.c\
-factorial.c\
-unity/unity.c
+SRC = Test/t_box38.c\
+Src/box38.c
+
 
 
 # All test source files
 
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).exe
 
 # All include folders with header files
 
-INC =./unity
+
+INC	= -Iinc\
+-Iunity\
 
 #Library Inlcudes
 #INCLUDE_LIBS = 
 INCLUDE_LIBS = -lcunit
 
 # Project Output name
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).exe
 
 # Document files
 DOCUMENTATION_OUTPUT = documentation/html
@@ -40,12 +42,12 @@ $(PROJECT_NAME):all
 $(PROJECT_NAME).out: $(SRC)
 	gcc $^ -I $(INC) -o $@
 
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
+all: $(Test) $(SRC) $(BUILD)
+	gcc $(Test) $(SRC) $(INC) -o $(PROJECT_OUTPUT).exe
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
+	./$(PROJECT_OUTPUT).exe
 
 # All test source files
 test: $(PROJECT_NAME).out
@@ -67,3 +69,6 @@ codesize:${PROJECT_NAME}.out
 
 clean:
 		rm -rf *.out *.o documentation/html *.gcov *.gcda *.gcno
+
+$(BUILD):
+	mkdir build
