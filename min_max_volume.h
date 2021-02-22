@@ -14,7 +14,7 @@
 # include"Boxes.h"
 # include<stdlib.h>
 # include<stdio.h>
-#include<limits.h>
+# include<limits.h>
 /*
  * @param box1 passes boxes
  * @return unsigned long volume of a single box
@@ -34,9 +34,7 @@ unsigned long min_volume(Box *box1,const unsigned int number_of_boxes);
  * 
  * @param box1 passes all the boxes
  * @return unsigned long max_volume of all the boxes
- */
-
-unsigned long max_volume(Box *box1,const unsigned int number_of_boxes);
+ */ 
 
 /**
  * @brief Calculates difference between maximum and minimum volume of all the boxes

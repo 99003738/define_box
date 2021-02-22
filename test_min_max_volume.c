@@ -1,18 +1,23 @@
 # include"min_max_volume.h"
-#include<stdio.h>
-#include<stdlib.h>
 
 int main()
 {
-      Box *box1;
       unsigned int number_of_boxes;
-      box1=(Box*)malloc(sizeof(Box)*__INT_MAX__);
-      printf("\nEnter how many boxes you want to add :");
+
+      printf("\nEnter number of boxes you want to add:");
       scanf("%u",&number_of_boxes);
-      box1=add_boxes(box1,number_of_boxes);
+      
+      Box *box1=(Box*)calloc(number_of_boxes,sizeof(Box));
+     
+      box1= add_boxes(box1,number_of_boxes);
+
+      
       unsigned long diff=difference_min_max_volume(box1,number_of_boxes);
-      printf("\nDifference between maximum and minimum volume");
+
+      printf("\nDifference between maximum and minimum volume : ");
       printf("%lu",diff);
-      free(box1);
+
+      //free(box1);
+     // box1=NULL;
       return 0; 
 }

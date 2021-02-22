@@ -2,7 +2,6 @@
 # include"Boxes.h"
 # include<stdio.h>
 #include<stdlib.h>
-#include<limits.h>
 
 unsigned long volume_of_box(Box *box1)
 {
@@ -13,11 +12,12 @@ unsigned long volume_of_box(Box *box1)
 
 unsigned long min_volume(Box *box1,const unsigned int number_of_boxes)
 {
-    unsigned long minimum_volume=INT_MAX;
     Box *temp_box=box1;
+    unsigned long minimum_volume=volume_of_box(temp_box);
+    temp_box++;
     for(int i=0;i<number_of_boxes;i++)
     {
-        if(minimum_volume < volume_of_box(temp_box))
+        if(minimum_volume > volume_of_box(temp_box))
         {
             minimum_volume = volume_of_box(temp_box);
             
@@ -29,15 +29,14 @@ unsigned long min_volume(Box *box1,const unsigned int number_of_boxes)
 
 unsigned long max_volume(Box *box1,const unsigned int number_of_boxes)
 {
-    int maximum_volume=0;
     Box *temp_box=box1;
+    unsigned long maximum_volume=volume_of_box(temp_box);
+    temp_box++;
     for(int i=0;i<number_of_boxes;i++)
     {
         if(maximum_volume < volume_of_box(temp_box))
         {
             maximum_volume = volume_of_box(temp_box);
-            
-            temp_box++;
         }
     }
     return maximum_volume;

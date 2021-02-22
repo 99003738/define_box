@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "string.h": "c"
+        "string.h": "c",
+        "min_max_volume.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
