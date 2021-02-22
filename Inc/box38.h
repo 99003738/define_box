@@ -27,12 +27,13 @@ typedef struct box
     long int weight;
 } BOX;
 
-int* bptr;
+ 
+BOX* bptr;
 
 
 
-int* _input(void);
-int* table_allocation(void);
+int _input(void);
+int table_allocation(void);
 int additionOfBox(int*);
 
 int inserting_value(int*);
