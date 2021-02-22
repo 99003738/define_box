@@ -15,10 +15,11 @@ unsigned long min_volume(Box *box1,const unsigned int number_of_boxes)
     unsigned long minimum_volume=65536;
     Box *temp_box=box1;
     for(int i=0;i<number_of_boxes;i++)
-    { 
-        if(minimum_volume > volume(temp_box))
+    {
+        if(minimum_volume < volume(temp_box))
         {
             minimum_volume = volume(temp_box);
+            
             temp_box++;
         }
     }

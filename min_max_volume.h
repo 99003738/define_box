@@ -13,6 +13,8 @@
 # define _MINMAXVOLUME_H_
 
 # include"Boxes.h"
+# include<stdlib.h>
+# include<stdio.h>
 
 /**
  * @brief calculates volume of box

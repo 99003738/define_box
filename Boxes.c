@@ -1,34 +1,48 @@
 # include"Boxes.h"
+#include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 
 Box* add_boxes(Box *box1,unsigned int number_of_boxes)
 {
+    unsigned int unique_id1;
+    unsigned int length1;
+    unsigned int breadth1;
+    unsigned int height1;
+    char color1[50];
+    unsigned int weight1;
+
     if(box1==NULL)
     {
         printf("You can't add anymore boxes");
-        return ;
+        return 0;
     }
-    printf("\nEnter how many boxes you want to add :");
-    scanf("%u",&number_of_boxes);
     for(int i=0;i<number_of_boxes;i++)
     {
         printf("\nEnter Unique ID for the BOX :");
-        scanf("%u",box1->unique_id);
-    
+        scanf("%u",&unique_id1);
+
          printf("\nEnter Length for the BOX : ");
-        scanf("%u",box1->length);
+        scanf("%u",&length1);
     
          printf("\nEnter Breadth for the BOX : ");
-        scanf("%u",box1->breadth);
+        scanf("%u",&breadth1);
     
         printf("\nEnter Height for the BOX : ");
-        scanf("%u",box1->height);
+        scanf("%u",&height1);
 
         printf("\nEnter Color for the BOX : ");
-        scanf("%s",box1->color);
+        scanf("%s",color1);
 
         printf("\nEnter Height for the BOX : ");
-        scanf("%u",box1->weight);
+        scanf("%u",&weight1);
+
+        box1->unique_id=unique_id1;
+        box1->length=length1;
+        box1->breadth=breadth1;
+        box1->height=height1;
+        strcpy(box1->color,color1);
+        box1->weight=weight1;
 
         box1++;
     }

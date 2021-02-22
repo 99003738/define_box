@@ -12,6 +12,10 @@
 # ifndef _BOXES_H_
 # define _BOXES_H_
 
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 /**
  * @brief Structure which holds information of unique_id,length,breadth,height,color,weight of every box
  */
