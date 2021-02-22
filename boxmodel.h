@@ -25,7 +25,6 @@ typedef struct
     unsigned int height;
     char colour[20];
     unsigned int weight;
-    unsigned long volume = 0;
 } Boxes;
 
 void display(const Boxes *ptr);
