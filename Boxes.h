@@ -16,6 +16,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+
+# define MAX_SIZE 50
 /**
  * @brief Structure which holds information of unique_id,length,breadth,height,color,weight of every box
  */

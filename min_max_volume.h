@@ -1,12 +1,11 @@
 /**
- * @file Boxes.h
+ * @file min_max_volume.h
  * @author Shivanshu Shukla (shivanshu.shukla@ltts.com)
  * @brief This file stores header for all the boxes
  * @version 0.1
  * @date 2021-02-20
- *
  * @copyright Copyright (c) 2021
- *
+ * 
  */
 
 # ifndef _MINMAXVOLUME_H_
@@ -15,10 +14,8 @@
 # include"Boxes.h"
 # include<stdlib.h>
 # include<stdio.h>
-
-/**
- * @brief calculates volume of box
- * 
+#include<limits.h>
+/*
  * @param box1 passes boxes
  * @return unsigned long volume of a single box
  */
