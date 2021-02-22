@@ -19,13 +19,16 @@
 
 typedef struct
 { /* data */
-    unsigned int unique_id;
-    unsigned int length;
-    unsigned int breadth;
-    unsigned int height;
+    int unique_id;
+    int length;
+    int breadth;
+    int height;
     char colour[20];
-    unsigned int weight;
-} Boxes;
+    int weight;
+    float volume;
+}Boxes;
+
+struct Boxes *head; 
 
 void display(const Boxes *ptr);
 Boxes *addbox(Boxes *box_add, int number_of_boxes);
