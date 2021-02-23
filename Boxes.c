@@ -34,7 +34,7 @@ Box* add_boxes(Box *box1,unsigned int number_of_boxes)
         printf("\nEnter Color for the BOX : ");
         scanf("%s",color1);
 
-        printf("\nEnter Height for the BOX : ");
+        printf("\nEnter Weight for the BOX : ");
         scanf("%u",&weight1);
 
         box1->unique_id=unique_id1;
