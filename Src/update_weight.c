@@ -1,5 +1,5 @@
 #include "box.h"
-#include "update.h"
+#include "updateweight.h"
 
 
 int update_weight(int *bptr,int GivUniq_Id, int GivenWeight)
