@@ -3,10 +3,12 @@
 # include<stdio.h>
 #include<stdlib.h>
 
-unsigned long volume_of_box(Box *box1)
+
+unsigned long volume_of_box(Box *temp_box)
 {
     unsigned long volume;
-    volume= (box1->length)*(box1->breadth)*(box1->height);
+    volume= (temp_box->length)*(temp_box->breadth)*(temp_box->height);
+    printf("\n%lu",volume);
     return volume;
 }
 
@@ -24,6 +26,7 @@ unsigned long min_volume(Box *box1,const unsigned int number_of_boxes)
             temp_box++;
         }
     }
+    printf("\n%lu",minimum_volume);
     return minimum_volume;
 }
 
@@ -39,6 +42,7 @@ unsigned long max_volume(Box *box1,const unsigned int number_of_boxes)
             maximum_volume = volume_of_box(temp_box);
         }
     }
+    printf("\n%lu",maximum_volume);
     return maximum_volume;
 }
 
