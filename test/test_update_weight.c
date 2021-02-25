@@ -11,7 +11,7 @@ int main()
       delete_box(int *bptr,int GivUniq_Id);
       printf("\nEnter updated weight:");
       scanf("%u",&givenWeight);
-    
+      delete_box(int *bptr,int GivUniq_Id);
  //.... some other code
 
       return 0; 
