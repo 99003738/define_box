@@ -17,6 +17,7 @@
 #include<stdlib.h>
 #include<string.h>
 
+
 /**
  * @brief Structure which holds information of unique_id,length,breadth,height,color,weight of every box
  */
@@ -31,13 +32,16 @@ typedef struct
     unsigned int weight;
 }Box;
 
+#define MAX_SIZE 50 /*Maximum Number of boxes program allocates memory for*/
+
+
 /**
- * @brief add_boxes adding data for the boxes
+ * @brief add_boxes adding data for the boxesunsigned int number_of_boxes)
  * @param [in] box1 array where boxes to be added
  * @param [in] number_of_boxes total number of boxes
  * @return all the boxes
  */
 
-Box* add_boxes(Box* box1,unsigned int number_of_boxes);
+Box* add_boxes(Box* box1);
 
 # endif
