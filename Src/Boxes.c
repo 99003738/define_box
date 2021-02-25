@@ -3,13 +3,14 @@
 #include<stdlib.h>
 #include<string.h>
 
-Box* add_boxes(Box *box1,unsigned int number_of_boxes)
+
+Box* add_boxes(Box *box1)
 {
     unsigned int unique_id1;
     unsigned int length1;
     unsigned int breadth1;
     unsigned int height1;
-    char color1[50];
+    char *colors;
     unsigned int weight1;
 
     if(box1==NULL)
@@ -17,7 +18,7 @@ Box* add_boxes(Box *box1,unsigned int number_of_boxes)
         printf("You can't add anymore boxes");
         return 0;
     }
-    for(int i=0;i<number_of_boxes;i++)
+    else
     {
         printf("\nEnter Unique ID for the BOX :");
         scanf("%u",&unique_id1);
@@ -32,7 +33,7 @@ Box* add_boxes(Box *box1,unsigned int number_of_boxes)
         scanf("%u",&height1);
 
         printf("\nEnter Color for the BOX : ");
-        scanf("%s",color1);
+        scanf("%s",colors);
 
         printf("\nEnter Weight for the BOX : ");
         scanf("%u",&weight1);
@@ -41,10 +42,9 @@ Box* add_boxes(Box *box1,unsigned int number_of_boxes)
         box1->length=length1;
         box1->breadth=breadth1;
         box1->height=height1;
-        strcpy(box1->color,color1);
+        strcpy(box1->color,colors);
         box1->weight=weight1;
-
-        box1++;
     }
+    
     return box1;
 }
